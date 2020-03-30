@@ -116,6 +116,3 @@ all.config
 
 # fetched Android config fragments
 android/configs/android-*.cfg
-
-Image.lz5-dtb
-dtbo.img
