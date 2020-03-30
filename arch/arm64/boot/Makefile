@@ -39,6 +39,12 @@ $(obj)/Image.gz: $(obj)/Image FORCE
 $(obj)/Image.lz4: $(obj)/Image FORCE
 	$(call if_changed,lz4)
 
+$(obj)/Image.lz4-dtb: $(obj)/Image.lz4 $(DTB_OBJS) FORCE
+	$(call if_changed,cat)
+
+$(obj)/dtbo.img: $(obj)/dts/dtboimg.cfg FORCE
+	$(call if_changed,mkdtimg)
+
 $(obj)/Image.lzma: $(obj)/Image FORCE
 	$(call if_changed,lzma)
 
